@@ -9,4 +9,6 @@
     <string name="sml">Small</string>
     <string name="med">Medium</string>
     <string name="lrg">Large</string>
+
+    <string name="error_player">YouTubePlayer initializing Error (%1$s)</string>
 </resources>

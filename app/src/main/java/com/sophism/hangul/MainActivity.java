@@ -13,6 +13,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
     Button btnDrawLetter;
     Button btnDrawNumber;
+    Button btnVideoList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         btnDrawNumber = (Button) findViewById(R.id.btn_draw_num);
         btnDrawNumber.setOnClickListener(this);
+
+        btnVideoList = (Button) findViewById(R.id.btn_video_list);
+        btnVideoList.setOnClickListener(this);
     }
 
     @Override
@@ -36,6 +40,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.btn_draw_num:
                 intent = new Intent(MainActivity.this, DrawActivity.class);
+                intent.putExtra("isNumber", true);
+                startActivity(intent);
+                break;
+            case R.id.btn_video_list:
+                intent = new Intent(MainActivity.this, VideoListActivity.class);
                 intent.putExtra("isNumber", true);
                 startActivity(intent);
                 break;
